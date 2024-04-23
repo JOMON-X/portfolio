@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 
 
-export default function Button({text,handleclick,icon}) {
+export default function Button({text,handleclick,icon,link}) {
   return (
     <>
   <StyledButton> 
