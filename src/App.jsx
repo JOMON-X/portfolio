@@ -6,6 +6,7 @@ import Me_Section from "./Components/Me_Section";
 import Footer from "./Components/Footer";
 import Headshot from "./Components/Headshot";
 import Skills from "./Components/Skills.jsx"
+import Portfolio from "./Components/Portfolio.jsx";
 
 
 export default function App() {
@@ -30,6 +31,10 @@ export default function App() {
           
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <Skills/>
+            </Grid>
+
+            <Grid item xs={12} sm={12} md={12} lg={12}>
+              <Portfolio/>
             </Grid>
           </Stack>
         </Grid>

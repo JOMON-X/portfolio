@@ -1,36 +1,39 @@
 import React from "react";
-import H1 from "./H1";
-import styled from "styled-components";
-import { Grid, Stack } from "@mui/material";
-import Card from "./Card";
-import Card2 from "./Card2";
+import Card_n from "../ui/Card_n";
+import loginImg from "../Assets/Images/login.png";
+import KTWimg from "../Assets/Images/kt.png";
+import { Container, Grid } from "@mui/material";
+import H1 from "../ui/H1.jsx"
 
 export default function Portfolio() {
   return (
     <>
-      <Styledportfolio>
-        <div id="port">
-          <H1 text={"Portfolio"}></H1>
-        </div>
-        <Stack direction={"row"}>
-          <Grid container>
-            <Grid item xs={12} sm={12} md={6} lg={6}>
-              <Card></Card>
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6}>
-              <Card2></Card2>
-            </Grid>
+      <Container>
+        <Grid container display={"flex"} justifyContent={"center"} alignItems={"center"}>
+          <Grid item >
+          <H1 text={"Portfolio"}/>
           </Grid>
-        </Stack>
-      </Styledportfolio>
+          <Grid item >
+          <Grid>
+            <Card_n
+              C_image={loginImg}
+              C_heading={"Login validation"}
+              C_text={"simple single page log in validating with java script"}
+            />
+          </Grid>
+          <Grid>
+            <Card_n
+              C_image={KTWimg}
+              C_heading={"Kerala Tourism "}
+              C_text={
+                "designed and developed using html css and javascript this website provides a insight on kerala tourism district by district"
+              }
+            />
+          </Grid>
+          </Grid>
+          
+        </Grid>
+      </Container>
     </>
   );
 }
-
-const Styledportfolio = styled.div`
-  text-align: center;
-  .gen {
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-`;
