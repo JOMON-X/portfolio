@@ -4,17 +4,16 @@ import styled from "styled-components";
 
 
 
-export default function Tile({logo,alttext}) {
+export default function Tile({logo,alttext,text}) {
   return (
     <>
       <StyledTile>
-        <Grid container >
-          <Grid item>
+      
             <div className="tileBody">
             <img src={logo} alt={alttext} />
+            <h1>{text}</h1>
             </div>
-          </Grid>
-        </Grid>
+        
       </StyledTile>
     </>
   );

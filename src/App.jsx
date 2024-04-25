@@ -7,6 +7,7 @@ import Footer from "./Components/Footer";
 import Headshot from "./Components/Headshot";
 import Skills from "./Components/Skills.jsx"
 
+
 export default function App() {
   return (
     <>
@@ -26,6 +27,7 @@ export default function App() {
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <About />
             </Grid>
+          
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <Skills/>
             </Grid>

@@ -51,7 +51,7 @@ export default function Me_Section() {
                 xs: "center",
               }}}><Button
                       text={"Download CV"}
-                      handleclick={() => alert("mair")}
+                      handleclick={() => alert("Resume Downloaded")}
                       icon={ <DownloadIcon sx={{color:'white'}}/> }
                     ></Button></Grid>  
                

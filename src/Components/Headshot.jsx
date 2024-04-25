@@ -22,7 +22,8 @@ export default function Headshot() {
 const Styledimg = styled.div`
  img {
     height: 400px;
-  width: 350px;
+   width: 350px;
+   filter: drop-shadow(0px 0px 10px rgb(68, 183, 203)  );
 
   //for responsive image in react
     max-width: 100%;
