@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
+import PublicIcon from '@mui/icons-material/Public';
 
 export default function Card_n({ C_image, altText, C_heading, C_text }) {
   return (
@@ -11,7 +12,7 @@ export default function Card_n({ C_image, altText, C_heading, C_text }) {
           <div className="cardBody">
             <h2>{C_heading}</h2>
             <p>{C_text}</p>
-            <Button text={"Visit"} />
+            <Button text={"Visit"} icon={ <PublicIcon sx={{color:"white"}}/>}/>
           </div>
         </div>
       </StyledCard>

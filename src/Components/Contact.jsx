@@ -1,14 +1,15 @@
 import React from "react";
-import H1 from "./H1";
 import styled from "styled-components";
 import { Grid, Stack, TextField } from "@mui/material";
-import Button from "./Button";
+import H1 from "../ui/H1";
+import Button from "../ui/Button";
+
 
 export default function Contact() {
   return (
     <>
       <StyledContact>
-        <Stack>
+       
           <Grid container  columnSpacing={5}>
             <Grid item xs={12}>
              <div id="contact" className="con">
@@ -55,7 +56,7 @@ export default function Contact() {
 
             </Grid>
           </Grid>
-        </Stack>
+
       </StyledContact>
     </>
   );
@@ -68,9 +69,7 @@ const StyledContact = styled.div`
   }
 
 .conbox{
-  margin-top: 100px;
-  margin-bottom: 100px;
-  border: 1px solid white;
+  border: 1px solid rgb(68, 183, 203);
   border-radius: 15px;
   padding: 30px ;
   background-color: #646363;
@@ -91,9 +90,8 @@ const StyledContact = styled.div`
 }
 
 .conbox2{
-  margin-top: 100px;
-  margin-bottom: 100px;
-  border: 1px solid white;
+  
+  border: 1px solid rgb(68, 183, 203);
   border-radius: 15px;
   padding: 10px ;
   background-color: #646363;
