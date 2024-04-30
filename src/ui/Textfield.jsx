@@ -19,8 +19,8 @@ const StyledTextField = styled.div`
     outline: none;
     border: 1px solid rgb(68, 183, 203);
     border-radius: 3px;
-    width:200px ;
-    height: 30px;
+    width: inherit;
+    height: 50px;
     background: none;
     color: white;
 

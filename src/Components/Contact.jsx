@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Grid, Stack, TextField } from "@mui/material";
+import { Grid,TextField } from "@mui/material";
 import H1 from "../ui/H1";
 import Button from "../ui/Button";
+import SendIcon from '@mui/icons-material/Send';
 
 
 export default function Contact() {
@@ -10,7 +11,7 @@ export default function Contact() {
     <>
       <StyledContact>
        
-          <Grid container  columnSpacing={5}>
+          <Grid container rowGap={10}>
             <Grid item xs={12}>
              <div id="contact" className="con">
               <H1 text={"Contact"}></H1>
@@ -18,22 +19,24 @@ export default function Contact() {
             </Grid>
 
             <Grid item xs={12} sm={12} md={6} lg={6}>
-              <Grid container rowSpacing={2} columnSpacing={2} className="conbox">
-                <Grid item xs={12} className="title" > <H1 text={"Send Message"}></H1></Grid>
-                <Grid item xs={12} sm={12} md={12} lg={6} className="name" >
-                <TextField margin="none" fullWidth id="outlined-basic" label="Enter your Name" variant="outlined" />
+              <Grid container rowGap={2} columnGap={2} className="conbox">
+                <Grid  xs={12} display={"flex"} justifyContent={"center"} alignItems={"center"} >
+                  <H1 text={"Send Message"}/>
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={6} className="email">
+                <Grid  xs={12} sm={12} md={6} lg={6}  >
+                <TextField margin="none" fullWidth id="outlined-basic" label="Enter your Name" variant="outlined" color="" />
+                </Grid>
+                <Grid  xs={12} sm={12} md={6} lg={6} >
                 <TextField  fullWidth id="outlined-basic" label="Enter your Email" variant="outlined" />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={12} className="subject">
+                <Grid  xs={12} sm={12} md={12} lg={12} >
                 <TextField fullWidth id="outlined-basic" label="Enter Subject" variant="outlined" />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={12} className="message">
+                <Grid  xs={12} sm={12} md={12} lg={12} >
                 <TextField fullWidth id="outlined-multiline-static" label="Enter your Message" multiline rows={4} />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={12} className="btn">
-                 <Button text={"Send Message"} handleclick={()=>alert("Message Sent") }></Button>
+                <Grid  xs={12} sm={12} md={12} lg={12} display={"flex"} justifyContent={"center"} alignItems={"center"}>
+                 <Button text={"Send Message"} handleclick={()=>alert("Message Sent") } icon={ <SendIcon sx={{color:"white"}}/> }/>
                 </Grid>
               </Grid>
             </Grid>
@@ -77,17 +80,6 @@ const StyledContact = styled.div`
               0 0 20px rgb(68, 183, 203);
 }
 
-.btn{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .conbox2{
   

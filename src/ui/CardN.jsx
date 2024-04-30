@@ -10,9 +10,13 @@ export default function Card_n({ C_image, altText, C_heading, C_text }) {
         <div className="card">
           <img src={C_image} alt={altText}  className="cardImg"/>
           <div className="cardBody">
+            <div className="inter">
             <h2>{C_heading}</h2>
             <p>{C_text}</p>
-            <Button text={"Visit"} icon={ <PublicIcon sx={{color:"white"}}/>}/>
+            </div>
+            <div className="btn">
+            <Button text={"Visit"} icon={ <PublicIcon sx={{color:"white"}}/>}/> 
+           </div>
           </div>
         </div>
       </StyledCard>
@@ -47,20 +51,26 @@ const StyledCard = styled.div`
     border-radius: 10px;
     color: white;
     
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-   
-
     transition: 1s;
   }
   .card:hover .cardBody{
   right: 0;
   }
-  .cardBody h2{
-    
+  .inter{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .inter h2,p {
+    padding: 10px;
+    color:rgb(68, 183, 203) ;
+  }
+  .inter p{
+   font-size: 14px;
+  }
+  .btn{
+    display: flex;
+    justify-content: start;
+    margin: 10px;
   }
 `;
