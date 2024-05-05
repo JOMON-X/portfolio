@@ -3,6 +3,8 @@ import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Navbar() {
+    
+  
   return (
     <>
       <StyledNav>
@@ -32,9 +34,34 @@ export default function Navbar() {
           </nav>
 
           <span className="menuic">
-            <MenuIcon fontSize="large" sx={{ color: "rgb(68, 183, 203)" }} />
+            <MenuIcon  fontSize="large" sx={{ color: "rgb(68, 183, 203)" }} />
           </span>
+
         </header>
+          
+          
+        
+        <div className="sidenav">
+        <nav className="navs">
+            <ul>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#About">About</a>
+              </li>
+              <li>
+                <a href="#skill">Skils</a>
+              </li>
+              <li>
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+           </div>
       </StyledNav>
     </>
   );
@@ -51,7 +78,7 @@ const StyledNav = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10px;
+    padding: 30px 0px;
     background: rgba(0, 0, 0, 0);
   }
 
@@ -100,6 +127,23 @@ const StyledNav = styled.div`
 
   .navm {
     margin-left: 300px;
+  }
+
+  .sidenav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 350px;
+    background-color: red;
+    z-index: 1;
+
+  }
+
+  .navs{
+    display: flex !important; 
+    flex-direction: column !important;
+    justify-content:center !important;
   }
 
   @media (max-width: 1087px) {

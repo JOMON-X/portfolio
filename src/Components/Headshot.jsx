@@ -20,6 +20,7 @@ export default function Headshot() {
   )
 }
 const Styledimg = styled.div`
+z-index: 0;
  img {
     height: 400px;
    width: 350px;
