@@ -17,7 +17,7 @@ export default function Skills() {
     <>
       <StyledSkills>
         <Grid container spacing={10}>
-          <Grid item xs={12} display={"flex"} justifyContent={"center"}>
+          <Grid item id="skill" xs={12} display={"flex"} justifyContent={"center"}>
          <H1 text={"My skills"}/>    
          </Grid>
          <Grid item>

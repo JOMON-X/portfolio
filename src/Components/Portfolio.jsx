@@ -11,8 +11,8 @@ export default function Portfolio() {
   return (
     <>
     <StyledPortfolio>
-    <Grid container rowGap={10}>
-          <Grid item xs={12} display={"flex"} justifyContent={"center"} >
+    <Grid container rowGap={10} >
+          <Grid item id="portfolio" xs={12} display={"flex"} justifyContent={"center"} >
             <H1 text={"Portfolio"} />
           </Grid>
             

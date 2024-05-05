@@ -9,11 +9,11 @@ export default function About() {
         <Grid container>
           <Grid item sx={{ textAlign:"center" }}>
             <Stack spacing={7}>
-            <Grid item >
+            <Grid item id="About" >
               <H1 text={"About"} ></H1>
             </Grid>
             <Grid item>
-              <div id="About" className="hd">
+              <div  className="hd">
                 <p>
                   I am Mohammed Jouhar, a dedicated MERN Stack developer from
                   Kerala, India,

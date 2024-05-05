@@ -8,15 +8,23 @@ import Headshot from "./Components/Headshot";
 import Skills from "./Components/Skills.jsx"
 import Portfolio from "./Components/Portfolio.jsx";
 import Contact from './Components/Contact.jsx'
-import Test from "./Test.jsx";
+import Navbar from "./Components/Navbar.jsx";
+// import Test from "./Test.jsx";
+
 
 export default function App() {
+
   return (
     <>
       <Container>
         <Grid container>
           <Stack spacing={10}>
             <Grid container rowGap={10}>
+
+            <Grid item xs={12} sm={12} md={12} lg={12}>
+            <Navbar/>
+              </Grid>
+
 
               <Grid item xs={12} sm={6} md={6} lg={6}>
                 <MeSection />

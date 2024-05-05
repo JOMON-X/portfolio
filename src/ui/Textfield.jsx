@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-export default function Textfield({placeholder,type}) {
+export default function Textfield({placeholder,type,fullwidth}) {
   return (
     <>
       <StyledTextField>
@@ -19,17 +19,18 @@ const StyledTextField = styled.div`
     outline: none;
     border: 1px solid rgb(68, 183, 203);
     border-radius: 3px;
-    width: inherit;
-    height: 50px;
+   
+    width: 100%;
+    height:50px;
+
+
+
     background: none;
     color: white;
 
-    
-
-   background: rgba( 255, 255, 255, 0.2 );
-   backdrop-filter: blur( 3px );
-   text-align: center;
-   box-shadow: 0px 0px 10px rgb(68, 183, 203);
+    background: rgba( 255, 255, 255, 0.2 );
+    backdrop-filter: blur( 3px );
+    box-shadow: 0px 0px 10px rgb(68, 183, 203);
 
   }
 `
