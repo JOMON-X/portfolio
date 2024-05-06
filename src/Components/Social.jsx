@@ -85,7 +85,6 @@ const StyledSocial=styled.div`
  
     transition: all 0.4s ease-in-out 0ms;
 
-
 }
 
 

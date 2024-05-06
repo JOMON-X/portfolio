@@ -8,7 +8,7 @@ import Headshot from "./Components/Headshot";
 import Skills from "./Components/Skills.jsx"
 import Portfolio from "./Components/Portfolio.jsx";
 import Contact from './Components/Contact.jsx'
-import Navbar from "./Components/Navbar.jsx";
+import Navbar from "./Components/NavbarN.jsx";
 // import Test from "./Test.jsx";
 
 

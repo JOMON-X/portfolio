@@ -137,14 +137,10 @@ const StyledNav = styled.div`
     width: 350px;
     background-color: red;
     z-index: 1;
+    display: none;
 
   }
 
-  .navs{
-    display: flex !important; 
-    flex-direction: column !important;
-    justify-content:center !important;
-  }
 
   @media (max-width: 1087px) {
     .navm {
@@ -153,5 +149,8 @@ const StyledNav = styled.div`
     .menuic {
       display: block;
     }
+    /* .sidenav{
+      display: block;
+    } */
   }
 `;
