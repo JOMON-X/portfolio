@@ -3,13 +3,27 @@ import React from "react";
 import styled from "styled-components";
 import H1 from "../ui/H1.jsx";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function NavbarN() {
+  //need to rewrite with use satate 
+
+  function handleOpen (){
+   document.getElementById("navSide").style.display ="block"
+   document.getElementById("header").style.display="none"
+  }
+
+  function handleClose () {
+    document.getElementById("navSide").style.display="none"
+  }
+//-----------------------------//
+
+
   return (
     <>
       <StyledNavbar>
         <Grid container>
-          <Grid item className="header">
+          <Grid item id='header' className="header">
             <Grid item id="home" className="logo">
               <H1 text={"Mohammed Jouhar"} />
             </Grid>
@@ -32,11 +46,17 @@ export default function NavbarN() {
                 </li>
               </ul>
             </Grid>
-            <Grid item className="menuIcon">
-              <MenuIcon fontSize="large" sx={{ color: "rgb(68, 183, 203)" }} />
+            <Grid item  >
+              <div className="menuIcon" id="menuIcon" onClick={handleOpen} >
+              <MenuIcon  fontSize="large" sx={{ color: "rgb(68, 183, 203)" }} />
+              </div>
+              
             </Grid>
           </Grid>
-          <Grid item className="navSide">
+          <Grid item id='navSide' className="navSide" display={"flex"} justifyContent={"end"}>
+          <div id='closeIcon'className="closeIcon" onClick={handleClose}>
+          <CloseIcon fontSize="large" sx={{ color: "rgb(68, 183, 203)" }}/>
+          </div>
             <ul>
               <li>
                 <a href="#home">Home</a>
@@ -71,7 +91,9 @@ const StyledNavbar = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 30px 0px;
-    background: rgba(0, 0, 0, 0);
+    background: rgb(16, 24, 26);
+    position: fixed;
+    z-index: 10;
   }
 
   .navMain li {
@@ -109,7 +131,7 @@ const StyledNavbar = styled.div`
   }
 
   .navSide {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     height: 100%;
@@ -123,7 +145,7 @@ const StyledNavbar = styled.div`
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(3px);
     z-index: 1;
-    /* display: none; */
+    display: none;
   }
 
   .navSide li {
@@ -151,6 +173,9 @@ const StyledNavbar = styled.div`
   .cred{
     margin-top: 350px;
   }
+  .closeIcon{
+    padding: 10px;
+  }
 
   @media (max-width: 1087px) {
     .navMain {
@@ -159,8 +184,6 @@ const StyledNavbar = styled.div`
     .menuIcon {
       display: block;
     }
-    /* .sidenav{
-      display: block;
-    } */
+  
   }
 `;
